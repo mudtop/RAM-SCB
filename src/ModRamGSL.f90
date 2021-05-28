@@ -606,7 +606,7 @@ MODULE ModRamGSL
 
     xa = REAL(x1,c_double)
     ya = REAL(y1,c_double)
-    fa = REAL(f1,c_double)
+    fa = REAL(f1,c_double) ! When NPA = 90 in ModRamGrids, and not 72 (normal) assigment to this variable causes a seg fault. 
     xb = REAL(x2,c_double)
     yb = REAL(y2,c_double)
 

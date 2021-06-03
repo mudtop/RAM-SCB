@@ -400,10 +400,7 @@ MODULE ModRamInit
     DO I=25,Slen
       amla(i)=amla(i-1)+2.
     ENDDO
-    !write(*,*) "DL1"
-    !write(*,*) DL1
-    !write(*,*) "amla"
-    !write(*,*) amla
+
 
     IR1=DL1/0.25
     MDR=DL1*RE                  ! Grid size for Z=RO
@@ -415,16 +412,6 @@ MODULE ModRamInit
         BE(I,IML)=0.32/LZ(I)**3*SQRT(1.+3.*SIN(camlra)**2)/COS(camlra)**6
       ENDDO
     END DO
-    !write(*,*) "MDR"
-    !write(*,*) MDR
-    !write(*,*) "camlra"
-    !write(*,*) camlra
-    !write(*,*) "BE"
-    !write(*,*) BE
-    !write(*,*) "LZ, the wise"
-    !write(*,*) LZ
-    !write(*,*) "RLZ, the mystierous"
-    !write(*,*) RLZ
 
     DPHI=2.*PI/(NT-1)      ! Grid size for local time [rad]
     DO J=1,NT
@@ -489,28 +476,7 @@ MODULE ModRamInit
     CONE(NR+2)=1.5
     CONE(NR+3)=1.
     CONE(NR+4)=0.
-    !write(*,*) "ELB"
-    !write(*,*) ELB
-    !write(*,*) "WE"
-    !write(*,*) WE
-    !write(*,*) "RW"
-    !write(*,*) RW
-    !write(*,*) "EKEV"
-    !write(*,*) EKEV
-    !write(*,*) "GREL"
-    !write(*,*) GREL
-    !write(*,*) "V"
-    !write(*,*) V
-    !write(*,*) "EBND"
-    !write(*,*) EBND
-    !write(*,*) "GRBND"
-    !write(*,*) GRBND
-    !write(*,*) "VBND"
-    !write(*,*) VBND
-    !write(*,*) "DE"
-    !write(*,*) DE
-    !write(*,*) "CONE, the dumb"
-    !write(*,*) CONE
+
 
     ! PA is equatorial pitch angle in deg - PA(1)=90, PA(NPA)=0.
     ! MU is cosine of equatorial PA
@@ -574,16 +540,52 @@ MODULE ModRamInit
       ENDDO
       PAbn(NPA)=0.
     endif
-    !write(*,*) "PA"
-    !write(*,*) PA
-    !write(*,*) "MU"
-    !write(*,*) MU
-    !write(*,*) "WMU"
-    !write(*,*) WMU
-    !write(*,*) "DMU"
-    !write(*,*) DMU
-    !write(*,*) "PAbn"
-    !write(*,*) PAbn
+    write(*,*) "DL1"
+    write(*,*) DL1
+    write(*,*) "amla"
+    write(*,*) amla
+    write(*,*) "MDR"
+    write(*,*) MDR
+    write(*,*) "camlra"
+    write(*,*) camlra
+    write(*,*) "BE"
+    write(*,*) BE
+    write(*,*) "LZ, the wise"
+    write(*,*) LZ
+    write(*,*) "RLZ, the mystierous"
+    write(*,*) RLZ
+    write(*,*) "ELB"
+    write(*,*) ELB
+    write(*,*) "WE"
+    write(*,*) WE
+    write(*,*) "RW"
+    write(*,*) RW
+    write(*,*) "EKEV"
+    write(*,*) EKEV
+    write(*,*) "GREL"
+    write(*,*) GREL
+    write(*,*) "V"
+    write(*,*) V
+    write(*,*) "EBND"
+    write(*,*) EBND
+    write(*,*) "GRBND"
+    write(*,*) GRBND
+    write(*,*) "VBND"
+    write(*,*) VBND
+    write(*,*) "DE"
+    write(*,*) DE
+    write(*,*) "CONE, the dumb"
+    write(*,*) CONE
+    write(*,*) "PA"
+    write(*,*) PA
+    write(*,*) "MU"
+    write(*,*) MU
+    write(*,*) "WMU"
+    write(*,*) WMU
+    write(*,*) "DMU"
+    write(*,*) DMU
+    write(*,*) "PAbn"
+    write(*,*) PAbn
 
     ! Determine the range of NPA such that PA is outside the loss cone:
     ! UPA is upper boundary for pitch angle for given Z
